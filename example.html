@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Wheelers Cards</title>
+    <link rel="stylesheet" href="magiczoomplus/magiczoomplus.css">
+    <style>
+        /* Container for the four cards */
+        .cards-wrapper {
+            display: flex;
+            gap: 20px; /* Spacing between cards */
+            justify-content: center; /* Center the cards horizontally */
+            flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+            margin-top: 50px;
+        }
+
+        /* Perspective for 3D effect */
+        .card-container {
+            perspective: 1000px; /* Adds depth to the 3D effect */
+            width: 300px;
+            height: 180px;
+        }
+
+        /* Card styling */
+        .card {
+            width: 100%;
+            height: 100%;
+            background-color: #000080;
+            border-radius: 8px;
+            overflow: hidden;
+            color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: transform 0.1s ease;
+        }
+
+        /* 3D effect when hovering */
+        .card-container:hover .card {
+            transition: transform 0.4s ease;
+        }
+        .card {
+    width: 100%;
+    height: auto;
+    background-color: #000080;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align content */
+    padding: 10px; /* Adjust padding as needed */
+    transition: transform 0.1s ease;
+}
+
+.card-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Round top corners */
+}
+
+.card-content {
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Space between image and content */
+}
+
+.show-more {
+    margin-top: 10px; /* Space above button */
+    background-color: transparent; /* Customize button styles */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#zoom-placeholder {
+    position: fixed;
+    bottom: 25px;
+    left: 10px;
+    z-index: 100;
+    width: 250px;
+    height: 250px;
+  }
+/* Basic tab styling */
+.responsive-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.responsive-tabs .nav-item {
+    flex-shrink: 0;
+}
+
+.responsive-tabs .nav-link {
+    white-space: nowrap;
+}
+
+.responsive-tabs .more {
+    display: none; /* Hide the dropdown initially */
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .responsive-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .responsive-tabs .nav-item {
+        display: none; /* Hide all tabs on small screens */
+    }
+
+    .responsive-tabs .more {
+        display: inline-block; /* Show the dropdown */
+    }
+}
+
+/* When dropdown is open, ensure it is visible */
+.responsive-tabs .dropdown-menu {
+    display: none;
+}
+
+.responsive-tabs .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Container to hold all four cards -->
+    <div class="cards-wrapper">
+        <div class="card-container">
+            <div class="card" id="card1">
+                <img src="./assets/Images/used-3w.png" alt="Card 1" class="card-image">
+                <div class="card-content">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold m-0" style="font-size: 20px;">Three Wheelers</p>
+                        <p class="m-0 color-blue year" title="Model">2007</p>
+                    </div>
+                    <p class="fw-bold m-0"><span class="color-blue">From</span>: <span class="color-blue ms-1">₹</span> 56,774</p>
+                    <button class="show-more">Show More <svg class="arrow-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4937 0.62C13.3795 0.375651 13.1611 0.181475 12.8862 0.0799999C12.7509 0.028759 12.6057 0.00157999 12.4587 0H1.20867C0.910303 0 0.624155 0.105357 0.413177 0.292893C0.202198 0.48043 0.0836716 0.734784 0.0836716 1C0.0836716 1.26522 0.202198 1.51957 0.413177 1.70711C0.624155 1.89464 0.910303 2 1.20867 2H9.74742L0.409922 10.29C0.304477 10.383 0.220784 10.4936 0.163669 10.6154C0.106554 10.7373 0.0771484 10.868 0.0771484 11C0.0771484 11.132 0.106554 11.2627 0.163669 11.3846C0.220784 11.5064 0.304477 11.617 0.409922 11.71C0.514505 11.8037 0.638931 11.8781 0.776023 11.9289C0.913114 11.9797 1.06016 12.0058 1.20867 12.0058C1.35718 12.0058 1.50423 11.9797 1.64132 11.9289C1.77841 11.8781 1.90284 11.8037 2.00742 11.71L11.3337 3.41V11C11.3337 11.2652 11.4522 11.5196 11.6632 11.7071C11.8742 11.8946 12.1603 12 12.4587 12C12.757 12 13.0432 11.8946 13.2542 11.7071C13.4651 11.5196 13.5837 11.2652 13.5837 11V1C13.5819 0.869323 13.5513 0.740222 13.4937 0.62Z" fill="white"/></svg></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" id="card1">
+                <img src="./assets/Images/used-3w.png" alt="Card 1" class="card-image">
+                <div class="card-content">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold m-0" style="font-size: 20px;">Three Wheelers</p>
+                        <p class="m-0 color-blue year" title="Model">2007</p>
+                    </div>
+                    <p class="fw-bold m-0"><span class="color-blue">From</span>: <span class="color-blue ms-1">₹</span> 56,774</p>
+                    <button class="show-more">Show More <svg class="arrow-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4937 0.62C13.3795 0.375651 13.1611 0.181475 12.8862 0.0799999C12.7509 0.028759 12.6057 0.00157999 12.4587 0H1.20867C0.910303 0 0.624155 0.105357 0.413177 0.292893C0.202198 0.48043 0.0836716 0.734784 0.0836716 1C0.0836716 1.26522 0.202198 1.51957 0.413177 1.70711C0.624155 1.89464 0.910303 2 1.20867 2H9.74742L0.409922 10.29C0.304477 10.383 0.220784 10.4936 0.163669 10.6154C0.106554 10.7373 0.0771484 10.868 0.0771484 11C0.0771484 11.132 0.106554 11.2627 0.163669 11.3846C0.220784 11.5064 0.304477 11.617 0.409922 11.71C0.514505 11.8037 0.638931 11.8781 0.776023 11.9289C0.913114 11.9797 1.06016 12.0058 1.20867 12.0058C1.35718 12.0058 1.50423 11.9797 1.64132 11.9289C1.77841 11.8781 1.90284 11.8037 2.00742 11.71L11.3337 3.41V11C11.3337 11.2652 11.4522 11.5196 11.6632 11.7071C11.8742 11.8946 12.1603 12 12.4587 12C12.757 12 13.0432 11.8946 13.2542 11.7071C13.4651 11.5196 13.5837 11.2652 13.5837 11V1C13.5819 0.869323 13.5513 0.740222 13.4937 0.62Z" fill="white"/></svg></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" id="card1">
+                <img src="./assets/Images/used-3w.png" alt="Card 1" class="card-image">
+                <div class="card-content">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold m-0" style="font-size: 20px;">Three Wheelers</p>
+                        <p class="m-0 color-blue year" title="Model">2007</p>
+                    </div>
+                    <p class="fw-bold m-0"><span class="color-blue">From</span>: <span class="color-blue ms-1">₹</span> 56,774</p>
+                    <button class="show-more">Show More <svg class="arrow-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4937 0.62C13.3795 0.375651 13.1611 0.181475 12.8862 0.0799999C12.7509 0.028759 12.6057 0.00157999 12.4587 0H1.20867C0.910303 0 0.624155 0.105357 0.413177 0.292893C0.202198 0.48043 0.0836716 0.734784 0.0836716 1C0.0836716 1.26522 0.202198 1.51957 0.413177 1.70711C0.624155 1.89464 0.910303 2 1.20867 2H9.74742L0.409922 10.29C0.304477 10.383 0.220784 10.4936 0.163669 10.6154C0.106554 10.7373 0.0771484 10.868 0.0771484 11C0.0771484 11.132 0.106554 11.2627 0.163669 11.3846C0.220784 11.5064 0.304477 11.617 0.409922 11.71C0.514505 11.8037 0.638931 11.8781 0.776023 11.9289C0.913114 11.9797 1.06016 12.0058 1.20867 12.0058C1.35718 12.0058 1.50423 11.9797 1.64132 11.9289C1.77841 11.8781 1.90284 11.8037 2.00742 11.71L11.3337 3.41V11C11.3337 11.2652 11.4522 11.5196 11.6632 11.7071C11.8742 11.8946 12.1603 12 12.4587 12C12.757 12 13.0432 11.8946 13.2542 11.7071C13.4651 11.5196 13.5837 11.2652 13.5837 11V1C13.5819 0.869323 13.5513 0.740222 13.4937 0.62Z" fill="white"/></svg></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" id="card1">
+                <img src="./assets/Images/used-3w.png" alt="Card 1" class="card-image">
+                <div class="card-content">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold m-0" style="font-size: 20px;">Three Wheelers</p>
+                        <p class="m-0 color-blue year" title="Model">2007</p>
+                    </div>
+                    <p class="fw-bold m-0"><span class="color-blue">From</span>: <span class="color-blue ms-1">₹</span> 56,774</p>
+                    <button class="show-more">Show More <svg class="arrow-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4937 0.62C13.3795 0.375651 13.1611 0.181475 12.8862 0.0799999C12.7509 0.028759 12.6057 0.00157999 12.4587 0H1.20867C0.910303 0 0.624155 0.105357 0.413177 0.292893C0.202198 0.48043 0.0836716 0.734784 0.0836716 1C0.0836716 1.26522 0.202198 1.51957 0.413177 1.70711C0.624155 1.89464 0.910303 2 1.20867 2H9.74742L0.409922 10.29C0.304477 10.383 0.220784 10.4936 0.163669 10.6154C0.106554 10.7373 0.0771484 10.868 0.0771484 11C0.0771484 11.132 0.106554 11.2627 0.163669 11.3846C0.220784 11.5064 0.304477 11.617 0.409922 11.71C0.514505 11.8037 0.638931 11.8781 0.776023 11.9289C0.913114 11.9797 1.06016 12.0058 1.20867 12.0058C1.35718 12.0058 1.50423 11.9797 1.64132 11.9289C1.77841 11.8781 1.90284 11.8037 2.00742 11.71L11.3337 3.41V11C11.3337 11.2652 11.4522 11.5196 11.6632 11.7071C11.8742 11.8946 12.1603 12 12.4587 12C12.757 12 13.0432 11.8946 13.2542 11.7071C13.4651 11.5196 13.5837 11.2652 13.5837 11V1C13.5819 0.869323 13.5513 0.740222 13.4937 0.62Z" fill="white"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="./assets/Images/new-v-img2.png" class="MagicZoom" data-options="zoomPosition: #zoom-placeholder;"><img src="./assets/Images/new-v-img.png"></a>
+    <ul class="nav nav-tabs responsive-tabs" id="responsive-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#tab1" data-bs-toggle="tab">Two Wheelers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" data-bs-toggle="tab">Three Wheelers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab3" data-bs-toggle="tab">Four Wheelers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab4" data-bs-toggle="tab">Commercial Vehicles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab5" data-bs-toggle="tab">Construction Equipment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab6" data-bs-toggle="tab">Bus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab7" data-bs-toggle="tab">Tractor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab8" data-bs-toggle="tab">Electric</a>
+        </li>
+        <li class="nav-item dropdown more">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">More</a>
+            <ul class="dropdown-menu"></ul>
+        </li>
+    </ul>
+    
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab1">Two Wheelers Content</div>
+        <div class="tab-pane fade" id="tab2">Three Wheelers Content</div>
+        <div class="tab-pane fade" id="tab3">Four Wheelers Content</div>
+        <div class="tab-pane fade" id="tab4">Commercial Vehicles Content</div>
+        <div class="tab-pane fade" id="tab5">Construction Equipment Content</div>
+        <div class="tab-pane fade" id="tab6">Bus Content</div>
+        <div class="tab-pane fade" id="tab7">Tractor Content</div>
+        <div class="tab-pane fade" id="tab8">Electric Content</div>
+    </div>
+    
+    <script src="magiczoomplus/magiczoomplus.js"></script>
+    <script>
+        // Array of all cards
+        const cards = document.querySelectorAll('.card');
+        // Function to apply 3D hover effect on each card
+        cards.forEach((card) => {
+            const cardContainer = card.parentElement;
+
+            cardContainer.addEventListener('mousemove', (e) => {
+                const cardRect = cardContainer.getBoundingClientRect();
+                const xAxis = (cardRect.width / 2 - (e.clientX - cardRect.left)) / 10;
+                const yAxis = (cardRect.height / 2 - (e.clientY - cardRect.top)) / 10;
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+            cardContainer.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateY(0deg) rotateX(0deg)`; // Reset to original position
+            });
+        });
+    </script>
+    <script>
+        function updateResponsiveTabs() {
+            const tabs = document.querySelectorAll('#responsive-tabs .nav-item');
+            const dropdownMenu = document.querySelector('#responsive-tabs .dropdown-menu');
+            const moreTab = document.querySelector('#responsive-tabs .more');
+            let hiddenTabs = [];
+        
+            // Reset the dropdown menu
+            dropdownMenu.innerHTML = '';
+        
+            // Move tabs that overflow into the dropdown
+            tabs.forEach(tab => {
+                const isOverflowing = tab.getBoundingClientRect().bottom > document.querySelector('#responsive-tabs').getBoundingClientRect().bottom;
+                if (isOverflowing && !tab.classList.contains('more')) {
+                    hiddenTabs.push(tab);
+                    dropdownMenu.appendChild(tab);
+                }
+            });
+        
+            // Toggle the visibility of the dropdown
+            if (hiddenTabs.length > 0) {
+                moreTab.style.display = 'block';
+            } else {
+                moreTab.style.display = 'none';
+            }
+        }
+        
+        // Initial check
+        updateResponsiveTabs();
+        
+        // Update tabs on window resize
+        window.addEventListener('resize', updateResponsiveTabs);
+    </script>
+    
+
+</body>
+</html>

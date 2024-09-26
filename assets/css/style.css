@@ -1,0 +1,1290 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    /* font-family: 'Oswald'; */
+}
+::selection{
+    background: #000080;
+    color: white;
+}
+.container {
+    max-width: 1440px !important;
+    padding: 0 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.color-blue {
+    color: #000080;
+}
+.login-nav button {
+    background: #000080;
+    color: white;
+}
+
+.login-nav a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+.info-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    /* background: #f7f7f7; */
+}
+.info-nav li a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+    font-weight: 600;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.Nav-link {
+    display: flex;
+    gap: 25px;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center;
+}
+
+.Nav-link li a {
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.Nav-link li a:hover {
+    -webkit-text-stroke: 0.5px;
+    color: #000080;
+}
+
+.Nav-link li a {
+    position: relative;
+}
+
+.Nav-link li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #000080 !important;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.Nav-link li a:hover::after {
+    width: 100%;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 7px;
+    border: 2px solid #000;
+    border-radius: 25px;
+}
+
+.search-bar input {
+    outline: 0;
+    border: 0;
+}
+
+.bottom-nav {
+    background: #00008088;
+    height: 50px;
+    border-radius: 8px 8px 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav ul li a {
+    transition: .4s;
+
+}
+
+.bottom-nav ul li a:hover {
+    -webkit-text-stroke: 0.3px;
+
+}
+
+.bottom-nav ul li a:hover {
+    -webkit-text-stroke: 0.5px;
+    color: #000080;
+}
+
+.bottom-nav ul li a {
+    position: relative;
+}
+
+.bottom-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #fff !important;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.bottom-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dropdown-menu li a:hover {
+    color: #000080;
+}
+.nav-icon{
+    display: flex;
+    gap: 10px;
+}
+.nav-icon a{
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 1px #ccc;
+}
+nav {
+    height: 160px;
+}
+
+.h-100vh {
+    min-height: 90vh;
+}
+
+.head-bg {
+    background-image: url(/assets/Images/header-img5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+.heading-top {
+    color: white;
+}
+
+.head-vehicle-img {
+    height: 100%;
+    width: 550px;
+    transform: translateX(-15%);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide .head-vehicle-img {
+    width: 600px;
+    height: 425px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 100px !important;
+    left: -45% !important;
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 1 !important;
+    border: 1px solid #fff;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000080 !important;
+    width: 20px !important;
+    border-radius: 12px !important;
+    border: 1px solid #fff;
+}
+
+.vehicle-selection-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 800px;
+    width: 100%;
+    transform: translateY(-35px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.vehicle-type-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    transform: translateY(-40px);
+}
+
+.vehicle-button {
+    background: #fff;
+    color: #000080;
+    transition: all 0.3s;
+}
+
+.vehicle-button.active {
+    background: #000080;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 128, 0.2);
+}
+
+.vehicle-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.vehicle-filter-options {
+    display: flex;
+    gap: 10px;
+}
+.swiper-head .swiper-wrapper{
+height: unset !important;
+}
+.select-option {
+    border: 2px solid #000080;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    width: 28%;
+    color: #000080;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-button {
+    background-color: #000080;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.search-button .arrow {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-button:hover,
+.select-option:hover,
+.vehicle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 128, 0.2);
+}
+.login-nav button{
+    border-radius: 8px;
+}
+button,
+.search-button,
+.vehicle-button {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 15px;
+    border: 0;
+    font-size: 18px;
+    border: 2px solid;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.bg-dark-blue {
+    background: #000080;
+}
+
+ button::before,
+.search-button::before,
+.vehicle-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: transform 0.4s ease;
+}
+
+button:hover::before,
+.search-button:hover::before,
+.vehicle-button:hover::before {
+    transform: translateX(100%);
+}
+
+button:hover,
+.search-button:hover,
+.vehicle-button:hover {
+    background-color: #8484ff !important;
+    color: #fff !important;
+}
+
+.vehicle-button:hover svg path {
+    fill: #fff;
+}
+
+/* ==================================================Used Vehicle Category ================================= */
+.used-vehicle-bg {
+    background: #EEEEFF;
+    border-radius: 12px;
+}
+
+.used-w-category {
+    background-image: url(/assets/Images/used-4w.png);
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    height: 140px;
+    align-items: center;
+    width: 102%;
+    border-radius: 12px;
+    justify-content: center;
+    transform: skewX(-4deg);
+    transition: .4s;
+}
+
+.used-vehicle-card {
+    height: 100px;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 10px 0;
+    display: flex;
+    background: #000080;
+    align-items: center;
+    opacity: 0;
+    justify-content: center;
+    transition: .4s;
+    flex-direction: column;
+}
+
+.used-w-category:hover .used-vehicle-card {
+    opacity: 1;
+}
+
+.used-vehicle-card p {
+    font-size: 20px;
+}
+
+.used-vehicle-card button {
+    border-radius: 25px;
+    background: transparent;
+    border: 0;
+    border: 2px solid #000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 120px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+}
+
+.used-vehicle-card button .show-more-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Add transition for smooth text change */
+    font-size: 18px;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.used-vehicle-card button svg {
+    transition: opacity 0.3s ease;
+}
+
+.used-w-category:hover button .show-more-text {
+    opacity: 1;
+    /* Show "Show More" text */
+}
+
+.used-w-category:hover button {
+    background-color: #fff;
+    color: #000080;
+}
+
+.used-w-category:hover button svg {
+    opacity: 0;
+}
+
+.used-w-category2 {
+    background-image: url(/assets/Images/used-2w.png) !important;
+}
+
+.used-w-category3 {
+    background-image: url(/assets/Images/used-3w.png) !important;
+}
+
+.used-w-category4 {
+    background-image: url(/assets/Images/used-cv.png) !important;
+}
+
+.used-w-category5 {
+    background-image: url(/assets/Images/used-ce.png) !important;
+}
+
+.used-w-category6 {
+    background-image: url(/assets/Images/used-bus.png) !important;
+}
+
+.used-w-category7 {
+    background-image: url(/assets/Images/used-tractor.png) !important;
+}
+
+.used-w-category8 {
+    background-image: url(/assets/Images/used-scrap.png) !important;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+/* ================================================= Electric vehicles ========================================== */
+.electric-btn {
+    width: 100%;
+    padding: 26px 20px;
+    background: #EEEEFF;
+    border: 2px solid #000080;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    background: #000080E5;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    /* Smooth transition */
+}
+
+.overlay span {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+/* ===================================================Make the perfect choice=================================================== */
+.get-start {
+    font-size: 18px;
+    color: #AEAEAE;
+    text-transform: uppercase;
+}
+
+.head-line {
+    font-size: 40px;
+}
+
+.main-card {
+    border: 1px solid #000080;
+    border-radius: 8px;
+    padding: 10px;
+    height: 150px;
+}
+
+.main-card img {
+    height: 40px;
+    height: 50px;
+}
+
+.main-card p {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #000080;
+}
+
+.swiper-ev .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0 !important;
+    left: 1% !important;
+}
+.swiper-perfect .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0 !important;
+    left: 1% !important;
+}
+.swiper-head .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 5% !important;
+    left: 50% !important;
+}
+
+.swiper-slide-active .main-card {
+    box-shadow: 5px 5px #000080 !important;
+}
+
+.swiper-ev {
+    height: 180px;
+}
+
+.swiper-ev .swiper-pagination-bullet {
+    background: #ccc !important;
+}
+
+.swiper-ev .swiper-pagination-bullet-active {
+    background: #000080 !important;
+}
+.swiper-perfect {
+    height: 180px;
+}
+
+.swiper-perfect .swiper-pagination-bullet {
+    background: #ccc !important;
+}
+
+.swiper-perfect .swiper-pagination-bullet-active {
+    background: #000080 !important;
+}
+
+/* ========================================== New Vehicle Category ========================================== */
+.New-vehicle-category {
+    background: #EEEEFF;
+    border-radius: 12px;
+}
+
+.new-vehicle-card {
+    /* clip-path: polygon(0% 0%, 100% 0, 75% 100%, 0% 100%); */
+    border: 2px solid #000080;
+    background: #fff;
+    padding: 10px 0px 10px 10px;
+    border-radius: 8px;
+    transform: skewX(-15deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .4s;
+    height: 160px;
+}
+
+.new-vehicle-card img {
+    max-width: 120px;
+}
+
+.new-vehicle-card:hover {
+    transform: skew(0);
+    clip-path: polygon(0% 0%, 100% 0, 75% 100%, 0% 100%);
+    height: unset;
+    background: #000080;
+    color: white;
+    width: 250px;
+}
+
+.new-vehicle-card:hover img {
+    max-width: 200px;
+    height: 130px;
+}
+
+.new-vehicle-card:hover p {
+    color: white;
+}
+
+.new-vehicle-card:hover .newprice {
+    display: block !important;
+}
+
+.view-btn {
+    padding: 4px;
+    border-radius: 16px;
+    background-color: white;
+    color: #000080;
+    text-wrap: nowrap;
+    height: 30px;
+    border: 0;
+    margin-top: 59px;
+}
+
+.new-vehicle-card:hover .view-btn {
+    display: block !important;
+}
+/* Add this new class to apply hover effects directly */
+.new-vehicle-card.active-hover {
+    transform: skew(0);
+    clip-path: polygon(0% 0%, 100% 0, 75% 100%, 0% 100%);
+    height: unset;
+    background: #000080;
+    color: white;
+    width: 250px;
+}
+
+.new-vehicle-card.active-hover img {
+    max-width: 200px;
+    height: 130px;
+}
+
+.new-vehicle-card.active-hover p {
+    color: white;
+}
+
+.new-vehicle-card.active-hover .newprice {
+    display: block !important;
+}
+
+.new-vehicle-card.active-hover .view-btn {
+    display: block !important;
+}
+/*================================================================== Gallery================================================================== */
+.swiper-container {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto; /* Center the slider */
+}
+
+/* Gallery images */
+.gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    transition: .4s;
+}
+.gallery:hover img{
+    transform: scale(1.2);
+}
+.gallery img {
+    width: 100%;
+    transition: .4s;
+}
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-direction: column;
+    color: white;
+}
+.overlay p{
+    font-size: 24px;
+}
+.gallery:hover .overlay {
+    opacity: 1;
+}
+
+/* View Details button */
+.view-details {
+    color: #000080;
+    background-color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.gallery-slide .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.swiper-slide .gallery {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide:not(:first-child) .gallery img {
+    height: 200px;
+}
+
+.single img{
+    height: 400px !important;
+}
+/* ======================================================================Popular Used Vehicles====================================================================== */
+.nav-link{
+    border-bottom: 2px solid #000080 !important;
+    color: #000080 !important;
+    text-wrap: nowrap;
+}
+.nav-pills{
+    gap: 40px;
+}
+.nav-pills .nav-link.active{
+    color: white !important;
+    background: #000080 !important;
+}
+.popular-used-card{
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #efefef;
+    transition: .4s;
+}
+.popular-used-card:hover{
+    box-shadow: 1.11px 9.46px 15.57px 0px #2926A666;
+}
+.popular-used-card img{
+    border-radius: 12px;
+    max-width: 300px;
+    height: 180px;
+    width: 100%;
+}
+.popular-used-card p{
+    font-size: 18px;
+}
+.popular-used-card button {
+    background: #000080;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border: 0;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-used-card button .arrow-icon {
+    position: absolute;
+    right: 25%;
+    bottom: -10px; /* Start below the button */
+    transition: bottom 0.3s ease;
+    opacity: 0;
+}
+
+.popular-used-card button:hover .arrow-icon {
+    bottom: 14px; /* Move up on hover */
+    opacity: 1;
+}
+
+.popular-used-card .year{
+ padding: 5px;
+ border: 1px dashed #000080;
+ border-radius: 25px;
+ text-align: center;
+ height: 35px;
+}
+.swiper-button-next, .swiper-button-prev{
+    border-radius: 50%;
+    width: 50px !important;
+    height: 50px !important;
+    background: #000080 !important;
+    --swiper-theme-color:white;
+    font-size: 16px !important;
+    --swiper-navigation-size:22px;
+}
+.tab-content{
+    padding: 10px !important;
+}
+.mySwiper{
+    padding: 10px !important;
+}
+.bg-brand{
+     background-image: url(/assets/Images/tata-vehicles-category-brand.png);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+    padding: 10px;
+    border-radius: 12px;
+    height: 300px;
+    cursor: pointer;
+    transition: .4s;
+}
+.view-more{
+    font-size: 22px;
+    text-decoration: none;
+    color: #000080;
+    margin-top: 20px !important;
+}
+.view-more svg{
+    background: #000080;
+    border-radius: 50%;
+    padding: 2px;
+}
+.cv-gallery .swiper-slide{
+border-radius: 16px !important;
+overflow: hidden;
+}
+/* ================================================= Comparision Cards ================================================= */
+
+.popular-cv-card{
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #efefef;
+    transition: .4s;
+}
+.popular-cv-card:hover{
+    box-shadow: -0.89px 4.46px 15.57px 0px #2926A666;
+}
+.popular-cv-card img{
+    height: 120px;
+    width: 50%;
+}
+.popular-cv-card p{
+    font-size: 18px;
+}
+.popular-cv-card button {
+    background: #000080;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border: 0;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-cv-card .year{
+ padding: 5px;
+ border: 1px dashed #000080;
+ border-radius: 25px;
+ text-align: center;
+ height: 35px;
+}
+.compare-img{
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.compare-img span{
+    color: white;
+    border: 2px solid #fff;
+    background: #000080;
+    padding: 5px;
+    position: absolute;
+    top: 35%;
+    right: 45%;
+    border-radius: 50%;
+}
+/* ========================================================= Footer ================================================== */
+.bg-foot{
+    background-image: url(/assets/Images/footer-bg\ 1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    border-radius: 16px 16px 0px 0px;
+}
+.foot-text{
+    max-width: 300px;
+}
+.foot-link{
+    color: white;
+}
+h5{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+.foot-link li a{
+    text-decoration: none;
+    font-size: 18px !important;
+    color: rgb(182, 182, 182);
+    font-weight: 500 !important;
+}
+.foot-link li a:hover {
+    -webkit-text-stroke: 0.5px;
+    color: #fff;
+}
+
+.foot-link li a {
+    position: relative;
+}
+
+.foot-link li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #fff !important;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.foot-link li a:hover::after {
+    width: 100%;
+}
+.social li a{
+    background: #fff;
+    color: #f4f4f4;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 18px;
+    transition: .4s;
+}
+.social li a:hover{
+    box-shadow: 0px 5px 15px #fff;
+    transform: translateY(-10px);
+}
+/* ================================================Social Medial Right Icon================================================ */
+.Social-icon li a{
+    background: #fff;
+    color: #f4f4f4;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 18px;
+    transition: .4s;
+}
+.Social-icon li a:hover{
+    box-shadow: 0px 5px 15px #fff;
+    transform: translateY(-10px);
+}
+.Social-icon{
+    background: #000080;
+    padding: 12px !important;
+    border-radius: 16px 0 0 16px;
+    gap: 14px;
+}
+.social-media{
+    right: 0%;
+    position: fixed;
+    top: 40%;
+    z-index: 3;
+}
+/* ===============================================================Scroll Bar========================================== */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000080; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2d2de2; 
+  }
+  /*====================================================== Card Hover Effects ====================================================== */
+  .card-effect .col-3{
+    transition: .5s;
+    position: relative;
+    z-index: 2;
+  }
+  .card-effect .col-3:hover{
+transform: scale(1.1);
+  }
+  /*===================================================== Responsive Screen =====================================================*/
+
+.menu-icon-cross{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.cross{
+    transform: rotate(45deg);
+}
+.cross2{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+}
+.left-view{
+    left: 0% !important;
+}
+.d-block{
+    display: block !important;
+}
+.search-category{
+    box-shadow: 0 0 20px 0px #ccc;
+    border-radius: 16px;
+    padding: 10px;
+    height: 110px;
+    background: #fff;
+}
+.search-category img{
+    width: 90px;
+    /* transform: translateY(-30%); */
+    height: 62px;
+}
+.search-category p{
+    font-size: 12px;
+    text-align: center;
+    /* transform: translateY(-15px); */
+}
+.over-scroll{
+    overflow: scroll;
+}
+.used-card{
+    height: 100px;
+}
+.new-vehicle-card.active-hover img {
+    max-width: 140px;
+    height: 110px;
+}
+@media (max-width:1280px) {
+    .nav-pills{
+        gap: 10px;
+    }
+}
+@media (max-width:992px) {
+    .mobile-view{
+        position: fixed;
+        transition: .5s;
+        background: white;
+    flex-direction: column;
+    align-items: start;
+    padding:35px 20px !important;
+    left: -100%;
+    z-index: 3;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    gap: 20px;
+    min-height: 100vh;
+    }
+    .nav-link{
+        padding: 5px !important;
+    }
+    .foot-text{
+        max-width: unset;
+    }
+    .mobile-view li{
+        border-bottom: 2px dashed #000080;
+        width: 100%;
+    }
+    .mobile-view li a{
+        display: flex;
+        justify-content: space-between;
+    }
+    .layer-nav{
+        display: none;
+        background: #000000a3;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        z-index: 3;
+        height: 100%;
+    }
+    .menu-icon span{
+        width: 25px;
+        height: 3px;
+        background: #000080;
+        border-radius: 16px;
+    }
+    .menu-icon-cross span{
+        width: 25px;
+        height: 3px;
+        background: #000080;
+        border-radius: 16px;
+    }
+    .popular-used-card{
+        padding: 5px;
+    }
+    .popular-used-card p{
+        font-size: 12px;
+    }
+    .popular-used-card .year{
+        height: 25px;
+    }
+   
+    .popular-used-card img{
+        height: 120px;
+    }
+}
+@media (max-width:768px) {
+    nav{
+        height: 165px;
+    }
+    .video-sell{
+        height: 200px;
+    }
+    .tab-content{
+        padding: 0 !important;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .head-line{
+        font-size: 30px;
+    }
+    .h-100vh{
+        min-height: unset !important;
+    }
+    .vehicle-selection-container{
+        transform: translateY(0);
+        padding: 10px 0;
+    }
+    .vehicle-type-buttons{
+        transform: translateY(0);
+    }
+    .used-w-category{
+        transform: skew(0);
+    }
+    .skew-card{
+        transform: skew(0) !important;
+    }
+    .w-90{
+        width: 100%;
+    }
+    .swiper-container{
+        height: 260px;
+    }
+    .swiper-slide:not(:first-child) .gallery img {
+        height: 130px;
+    }
+    
+    .single img{
+        height: 260px !important;
+    }
+}
+@media (max-width:576px) {
+    p{
+        font-size: 14px;
+    }
+    .logo{
+        max-width: 150px;
+    }
+    .head-line{
+        font-size: 25px;
+    }
+    .used-w-category{
+        height: 85px;
+    }
+    .vehicle-button{
+        font-size: 12px;
+        padding: 5px;
+    }
+    nav{
+        height: 130px;
+    }
+    .nav-icon a svg{
+        width: 16px;
+        height: 16px;
+    }
+    button{
+        padding: 8px;
+    }
+    .container{
+        padding: 0 5px !important;
+    }
+
+}
+@media (max-width:400px) {
+    .logo{
+        max-width: 120px;
+    }
+}
+.Search-bar-home{
+    border: 2px solid #000;
+    border-radius: 30px;
+    width: 100%;
+    padding: 8px;
+}
+.Search-bar-home ul li a{
+    padding: 0 10px;
+}
+.Search-bar-home ul{
+    border-right: 2px solid #000;
+}
+.Search-bar-home input{
+        outline: none !important;
+        margin-left: 10px;
+        border: 0;
+        width: 60%;
+}
