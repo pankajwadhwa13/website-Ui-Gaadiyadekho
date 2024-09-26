@@ -1181,10 +1181,6 @@ transform: scale(1.1);
     .popular-used-card .year{
         height: 25px;
     }
-   
-    .popular-used-card img{
-        height: 160px;
-    }
 }
 @media (max-width:768px) {
     nav{
@@ -1228,7 +1224,6 @@ transform: scale(1.1);
     .swiper-slide:not(:first-child) .gallery img {
         height: 170px;
     }
-    
     .single img{
         height: 260px !important;
     }
