@@ -24,7 +24,18 @@
 .mt-50 {
     margin-top: 50px;
 }
-
+nav{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding:0 10px;
+}
+.mt-head{
+    margin-top: 130px;
+}
 .color-blue {
     color: #000080;
 }
@@ -1017,8 +1028,9 @@ h5{
     height: 36px;
     border-radius: 50%;
     text-align: center;
-    line-height: 36px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
     transition: .4s;
 }
@@ -1183,6 +1195,22 @@ transform: scale(1.1);
     }
 }
 @media (max-width:768px) {
+    .social-media{
+        position: absolute;
+        top: 2.95%;
+    }
+    .Social-icon{
+        padding: 5px !important;
+        gap: 5px;
+    }
+    .Social-icon li a{
+        width: 20px;
+        height: 20px;
+    }
+    .Social-icon li a svg{
+        width: 15px !important;
+        height: 15px !important;
+    }
     nav{
         height: 165px;
     }
