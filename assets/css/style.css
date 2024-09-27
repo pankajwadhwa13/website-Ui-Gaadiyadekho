@@ -1315,7 +1315,7 @@ transform: scale(1.1);
 }
 @media (max-width:400px) {
     .logo{
-        max-width: 120px;
+        max-width: 100px;
     }
     .tvs-banner img{
         height: 140px;
