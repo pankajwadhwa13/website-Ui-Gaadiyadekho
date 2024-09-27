@@ -82,8 +82,8 @@ var swiper_gallery = new Swiper('.swiper-container', {
   loop: true,
   speed: 3000,
   autoplay: {
-      delay: 0, // Make the slides move continuously
-      disableOnInteraction: false,
+      delay: 1000, // Make the slides move continuously
+      disableOnInteraction: true,
   },
   breakpoints: {
     400: {
@@ -105,8 +105,9 @@ swiperContainer.addEventListener('mouseover', () => {
 });
 
 swiperContainer.addEventListener('mouseout', () => {
-  swiper_gallery.autoplay.start(); // Corrected swiper to swiper_gallery
+  swiper_gallery.autoplay.start(); 
 });
+
 // =================================================popular-cards ================================//
 const swiper_popular = new Swiper('.mySwiper', {
   slidesPerView: 1.20,
