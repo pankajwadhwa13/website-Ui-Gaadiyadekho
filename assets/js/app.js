@@ -155,7 +155,7 @@ const swiper_popular = new Swiper('.mySwiper', {
       spaceBetween: 10
     },
     992: {
-      slidesPerView: 4.5,
+      slidesPerView: 4,
       spaceBetween: 20
     }
   }
