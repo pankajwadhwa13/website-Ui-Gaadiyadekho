@@ -1156,8 +1156,8 @@ transform: scale(1.1);
         height: 55px;
     }
     nav{
-        height: 125x;
-    }
+         height: 125px;
+   }
 }
 @media (max-width:1280px) {
     .nav-pills{
