@@ -150,16 +150,16 @@
                     </ul>
                     <div class="login-nav d-flex align-items-center gap-3">
                         <div class="nav-icon">
-                            <a href="#" class="d-md-flex d-none"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                            <a href="#" title="search" class="d-md-flex d-none"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M14.8301 13.6155L20.2101 18.9955C20.3992 19.1848 20.5054 19.4414 20.5053 19.7089C20.5052 19.9764 20.3989 20.2329 20.2096 20.422C20.0204 20.6111 19.7638 20.7173 19.4963 20.7172C19.2288 20.7171 18.9722 20.6108 18.7831 20.4215L13.4031 15.0415C11.7948 16.2872 9.77242 16.8734 7.74727 16.6809C5.72211 16.4884 3.84637 15.5316 2.50162 14.0052C1.15687 12.4787 0.444129 10.4974 0.508391 8.46409C0.572652 6.43082 1.40909 4.4984 2.84754 3.05995C4.286 1.62149 6.21842 0.785055 8.25168 0.720793C10.285 0.656532 12.2663 1.36927 13.7927 2.71402C15.3192 4.05877 16.276 5.93452 16.4685 7.95967C16.661 9.98482 16.0748 12.0073 14.8291 13.6155M8.50514 14.7165C10.0964 14.7165 11.6226 14.0844 12.7478 12.9592C13.873 11.834 14.5051 10.3078 14.5051 8.71654C14.5051 7.12524 13.873 5.59912 12.7478 4.4739C11.6226 3.34868 10.0964 2.71654 8.50514 2.71654C6.91384 2.71654 5.38772 3.34868 4.2625 4.4739C3.13728 5.59912 2.50514 7.12524 2.50514 8.71654C2.50514 10.3078 3.13728 11.834 4.2625 12.9592C5.38772 14.0844 6.91384 14.7165 8.50514 14.7165Z"
                                     fill="#000080" />
                             </svg></a>
-                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" fill="#000080" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                            <a href="#" title="Notification"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" fill="#000080" class="bi bi-bell-fill" viewBox="0 0 16 16">
                                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                               </svg></a>
-                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#000080" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <a href="#" title="Show Account"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#000080" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                               </svg></a>
@@ -170,10 +170,8 @@
                 <div class="bottom-nav d-md-flex d-none">
                     <ul class="m-0 p-0 d-flex align-items-center justify-content-center gap-3">
                         <li><a class="text-decoration-none text-white fw-semibold" href="#">TRAFFIC RULES</a></li>
-                        <li><a class="text-decoration-none text-white fw-semibold" href="#">IMPORTANCE OF INSURANCE</a>
-                        </li>
+                        <li><a class="text-decoration-none text-white fw-semibold" href="#">IMPORTANCE OF INSURANCE</a></li>
                         <li><a class="text-decoration-none text-white fw-semibold" href="#">DEALER POINT</a></li>
-                        <li><a class="text-decoration-none text-white fw-semibold" href="#">SELL</a></li>
                         <li><a class="text-decoration-none text-white fw-semibold" href="#">VEHICLE LOAN</a></li>
                     </ul>
                 </div>
@@ -671,7 +669,7 @@
                 similique <br class="d-none d-md-none" /><span class="d-md-flex align-items-center justify-content-center d-none"> unde assumenda! Nobis assumenda ea hic suscipit quae! Error veritatis aliquid dolorum!</span>
             </p>
             <div>
-                <ul class="nav nav-pills mb-3 d-flex flex-nowrap over-scroll" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-3 d-flex flex-nowrap over-scroll justify-content-between" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-2w-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-2w" type="button" role="tab" aria-controls="pills-2w"
@@ -699,7 +697,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-bus-tab" data-bs-toggle="pill" data-bs-target="#pills-bus"
-                            type="button" role="tab" aria-controls="pills-bus" aria-selected="false">Bus</button>
+                            type="button" role="tab" aria-controls="pills-bus" aria-selected="false">Bus Category</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-tractor-tab" data-bs-toggle="pill"
@@ -3319,7 +3317,7 @@
                 similique 
             </p>
             <div>
-                <ul class="nav nav-pills mb-1 ps-4 d-flex flex-nowrap over-scroll" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-1 ps-4 justify-content-between d-flex flex-nowrap over-scroll" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-2wb-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-2wb" type="button" role="tab" aria-controls="pills-2wb"
@@ -3347,7 +3345,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-busb-tab" data-bs-toggle="pill" data-bs-target="#pills-busb"
-                            type="button" role="tab" aria-controls="pills-busb" aria-selected="false">Bus</button>
+                            type="button" role="tab" aria-controls="pills-busb" aria-selected="false">Bus Category</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-tractorb-tab" data-bs-toggle="pill"
@@ -4445,7 +4443,7 @@
                 similique 
             </p>
             <div>
-                <ul class="nav nav-pills mb-3 d-flex flex-nowrap over-scroll" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-3 d-flex flex-nowrap over-scroll justify-content-between" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-2wc-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-2wc" type="button" role="tab" aria-controls="pills-2wc"
@@ -4473,7 +4471,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-busc-tab" data-bs-toggle="pill" data-bs-target="#pills-busc"
-                            type="button" role="tab" aria-controls="pills-busc" aria-selected="false">Bus</button>
+                            type="button" role="tab" aria-controls="pills-busc" aria-selected="false">Bus Category</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-tractorc-tab" data-bs-toggle="pill"
@@ -5730,7 +5728,7 @@
             <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, iste 
                 similique 
             </p>
-            <div style="min-height: 350px;">
+            <div class="slider-2w-h">
                 <div class="swiper swiper-2w">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide two-w-slider">
@@ -5840,7 +5838,7 @@
                 </div>
             </div>
         </div>
-    </section>
+       </section>
         <!-- Footer -->
         <footer class="mt-50 bg-foot">
             <div class="row justify-content-between">

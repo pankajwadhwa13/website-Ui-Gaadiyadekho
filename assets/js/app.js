@@ -226,7 +226,7 @@ const swiper_compare = new Swiper('.compare-Swiper', {
       spaceBetween: 10
     },
     992: {
-      slidesPerView: 3.25,
+      slidesPerView: 3,
       spaceBetween: 20
     }
   }

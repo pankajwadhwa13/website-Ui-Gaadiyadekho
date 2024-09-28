@@ -917,7 +917,7 @@ overflow: hidden;
 /* ================================================= Comparision Cards ================================================= */
 
 .popular-cv-card{
-    padding: 10px;
+    padding: 15px;
     background: white;
     border-radius: 12px;
     border: 2px solid #efefef;
@@ -927,7 +927,7 @@ overflow: hidden;
     box-shadow: -0.89px 4.46px 15.57px 0px #2926A666;
 }
 .popular-cv-card img{
-    height: 120px;
+    height: 150px;
     width: 50%;
 }
 .popular-cv-card p{
@@ -1145,9 +1145,88 @@ transform: scale(1.1);
     height: 320px;
     cursor: pointer;
 }
+.Search-bar-home{
+    border: 2px solid #000;
+    border-radius: 30px;
+    width: 100%;
+    padding: 8px;
+}
+.Search-bar-home ul li a{
+    padding: 0 10px;
+}
+.Search-bar-home ul{
+    border-right: 2px solid #000;
+}
+.Search-bar-home input{
+        outline: none !important;
+        margin-left: 10px;
+        border: 0;
+        width: 60%;
+}
+.two-w-slider img{
+height: 285px !important;
+border-radius: 12px;
+transition: .4s;
+cursor: pointer;
+}
+
+.swiper-2w .swiper-wrapper .swiper-slide-active img{
+    height: 330px !important;
+}
+.swiper-2w .swiper-wrapper{
+    align-items: center;
+}
+.swiper-2w .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0% !important;
+    left: 0% !important;
+}
+/* =============================================Tractor category  gallery============================================= */
+.tractor-container {
+    position: relative;
+}
+
+.tractor-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.tractor-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.overlay-content button {
+    font-size: 0.9rem;
+    background: #000080;
+    border: 0;
+}
+.slider-2w-h{
+    min-height: 350px;
+}
 @media (max-width:1440px) {
     .info-nav{
         height: 40px;
+    }
+    .slider-2w-h{
+        min-height: 290px;
     }
     .bottom-nav{
         height: 30px;
@@ -1158,6 +1237,18 @@ transform: scale(1.1);
     nav{
          height: 125px;
    }
+   .bg-brand{
+    height: 270px;
+   }
+   .tvs-banner img{
+    height: 280px;
+   }
+   .two-w-slider img{
+    height: 250px !important;
+   }
+   .swiper-2w .swiper-wrapper .swiper-slide-active img{
+    height: 280px !important;
+}
 }
 @media (max-width:1280px) {
     .nav-pills{
@@ -1337,77 +1428,4 @@ transform: scale(1.1);
     .tvs-banner img{
         height: 140px;
     }
-}
-.Search-bar-home{
-    border: 2px solid #000;
-    border-radius: 30px;
-    width: 100%;
-    padding: 8px;
-}
-.Search-bar-home ul li a{
-    padding: 0 10px;
-}
-.Search-bar-home ul{
-    border-right: 2px solid #000;
-}
-.Search-bar-home input{
-        outline: none !important;
-        margin-left: 10px;
-        border: 0;
-        width: 60%;
-}
-.two-w-slider img{
-height: 285px !important;
-border-radius: 12px;
-transition: .4s;
-cursor: pointer;
-}
-
-.swiper-2w .swiper-wrapper .swiper-slide-active img{
-    height: 330px !important;
-}
-.swiper-2w .swiper-wrapper{
-    align-items: center;
-}
-.swiper-2w .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 0% !important;
-    left: 0% !important;
-}
-/* =============================================Tractor category  gallery============================================= */
-.tractor-container {
-    position: relative;
-}
-
-.tractor-container .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease;
-}
-
-.tractor-container:hover .overlay {
-    opacity: 1;
-}
-
-.overlay-content {
-    color: white;
-    text-align: center;
-}
-
-.overlay-content p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.overlay-content button {
-    font-size: 0.9rem;
-    background: #000080;
-    border: 0;
 }
