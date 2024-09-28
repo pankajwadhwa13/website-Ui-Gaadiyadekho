@@ -97,6 +97,30 @@ slidesPerView:2.5,
     }
   }
 });
+var mySwiper = new Swiper(".swiper-2w", {
+  spaceBetween: 10,
+  slidesPerView: 3,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 1000,
+  
+  // Add pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  
+  // Add navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 
 // Pause autoplay on hover
 const swiperContainer = document.querySelector('.swiper-container');

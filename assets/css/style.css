@@ -1139,7 +1139,7 @@ transform: scale(1.1);
     height: 110px;
 }
 .tvs-banner img{
-    height: 380px;
+    height: 320px;
     cursor: pointer;
 }
 @media (max-width:1280px) {
@@ -1338,4 +1338,59 @@ transform: scale(1.1);
         margin-left: 10px;
         border: 0;
         width: 60%;
+}
+.two-w-slider img{
+height: 285px !important;
+border-radius: 12px;
+transition: .4s;
+cursor: pointer;
+}
+
+.swiper-2w .swiper-wrapper .swiper-slide-active img{
+    height: 330px !important;
+}
+.swiper-2w .swiper-wrapper{
+    align-items: center;
+}
+.swiper-2w .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0% !important;
+    left: 0% !important;
+}
+/* =============================================Tractor category  gallery============================================= */
+.tractor-container {
+    position: relative;
+}
+
+.tractor-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.tractor-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.overlay-content button {
+    font-size: 0.9rem;
+    background: #000080;
+    border: 0;
 }
