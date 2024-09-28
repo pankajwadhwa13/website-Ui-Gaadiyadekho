@@ -1153,10 +1153,10 @@ transform: scale(1.1);
         height: 30px;
     }
     .main-nav{
-        height: 45px;
+        height: 50px;
     }
     nav{
-        height: 130px;
+        height: 115px;
     }
 }
 @media (max-width:1280px) {
