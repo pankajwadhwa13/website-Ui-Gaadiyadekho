@@ -78,25 +78,30 @@ vehicleCards.forEach(card => {
 // =============================================Gallery=================================//
 var swiper_gallery = new Swiper('.swiper-container', {
   slidesPerView: 1.5, // Adjust the number of slides visible at once
-  spaceBetween: 0,
+  spaceBetween: 15,
   loop: true,
   speed: 3000,
-  autoplay: {
-      delay: 1000, // Make the slides move continuously
-      disableOnInteraction: true,
-  },
   breakpoints: {
     400: {
-      slidesPerView:2,
+      slidesPerView: 2,
     },
-    768:{
-slidesPerView:2.5,
+    768: {
+      slidesPerView: 2.5,
     },
     992: {
       slidesPerView: 3,
     }
   }
 });
+
+const Swiper_gallery_4w = document.querySelector(".swiper-container")
+Swiper_gallery_4w.addEventListener('mouseenter', function() {
+  swiper_gallery.autoplay.stop();
+})
+Swiper_gallery_4w.addEventListener('mouseleave', function() {
+  swiper_gallery.autoplay.start();
+})
+
 var mySwiper = new Swiper(".swiper-2w", {
   spaceBetween: 10,
   slidesPerView: 3,
@@ -121,16 +126,6 @@ var mySwiper = new Swiper(".swiper-2w", {
   },
 });
 
-
-// Pause autoplay on hover
-const swiperContainer = document.querySelector('.swiper-container');
-swiperContainer.addEventListener('mouseover', () => {
-  swiper_gallery.autoplay.stop(); // Corrected swiper to swiper_gallery
-});
-
-swiperContainer.addEventListener('mouseout', () => {
-  swiper_gallery.autoplay.start(); 
-});
 
 // =================================================popular-cards ================================//
 const swiper_popular = new Swiper('.mySwiper', {
@@ -167,20 +162,20 @@ var swiper_cv = new Swiper('.cv-swiper', {
   loop: true,
   speed: 3000,
   autoplay: {
-      delay: 0, // Make the slides move continuously
-      disableOnInteraction: false,
+    delay: 0, // Make the slides move continuously
+    disableOnInteraction: false,
   },
   breakpoints: {
     450: {
-      slidesPerView:2,
+      slidesPerView: 2,
       spaceBetween: 10
     },
     576: {
-      slidesPerView:2,
+      slidesPerView: 2,
       spaceBetween: 10
     },
     768: {
-      slidesPerView:3,
+      slidesPerView: 3,
       spaceBetween: 10
     },
     992: {
@@ -189,24 +184,18 @@ var swiper_cv = new Swiper('.cv-swiper', {
     }
   }
 });
-var swiper_new = new Swiper('.swiper-new', {
-  fadeEffect: {
-    crossFade: true
-  },
-  autoplay:true,
-  autoplay:{
-    delay:1000,
-  },
-  effect: "cards",
-  grabCursor: true,
-  initialSlide: 2,
-  speed: 500,
-    loop: true,
-    rotate: true,
-    mousewheel: {
-    invert: false,
-  },
+
+// Stop autoplay on hover and resume on mouse leave
+const swiper_cv_gallery = document.querySelector('.cv-swiper');
+
+swiper_cv_gallery.addEventListener('mouseenter', function() {
+  swiper_cv.autoplay.stop();
 });
+
+swiper_cv_gallery.addEventListener('mouseleave', function() {
+  swiper_cv.autoplay.start();
+});
+
 // ==================================================== Comparision=========================================//
 const swiper_compare = new Swiper('.compare-Swiper', {
   slidesPerView: 1,
@@ -237,9 +226,17 @@ document.querySelector('.arrow').addEventListener('click', function() {
   hiddenIcons.style.display = hiddenIcons.style.display === 'block' ? 'none' : 'block';
 });
 // ======================================================Responsive NavBar==============================//
-let mobileView = document.querySelector(".mobile-view")
+let mobileView = document.querySelectorAll(".mobile-view")
 let layerNav =  document.querySelector(".layer-nav")
 function View() {
   mobileView.classList.toggle("left-view");
 layerNav.classList.toggle("d-block")
 }
+
+// JavaScript to toggle between + and - icons
+document.querySelectorAll('.filter-toggle').forEach(button => {
+  button.addEventListener('click', function () {
+      const icon = this.querySelector('.accordion-icon');
+      icon.textContent = this.getAttribute('aria-expanded') === 'true' ? '-' : '+';
+  });
+});

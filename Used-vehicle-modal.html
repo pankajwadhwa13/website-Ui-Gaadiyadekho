@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav style="height: unset !important; border-radius: 8px;">
+            <ul class="info-nav m-0 p-0 d-sm-flex d-none">
+                <li><a href="tel:+8168510726" target="_blank"><svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3851 11.1502C16.9343 10.7665 16.3906 10.5614 15.8144 10.5614C15.2428 10.5614 14.6945 10.7627 14.2251 11.1464L12.7567 12.3431C12.6358 12.2899 12.515 12.2405 12.3988 12.1912C12.2315 12.1228 12.0735 12.0582 11.9388 11.9898C10.5633 11.2756 9.3132 10.3448 8.11426 9.14054C7.53338 8.54029 7.14303 8.03502 6.85956 7.52215C7.24062 7.23722 7.5938 6.9409 7.93768 6.65597C8.06779 6.5496 8.19791 6.43943 8.32803 6.33306C9.30391 5.53526 9.30391 4.50193 8.32803 3.70413L7.05939 2.667C6.91533 2.54923 6.76662 2.42766 6.62721 2.30609C6.34839 2.07055 6.05563 1.82741 5.75357 1.59947C5.30281 1.23477 4.76375 1.04102 4.19681 1.04102C3.62987 1.04102 3.08152 1.23477 2.61682 1.59947C2.61217 1.60327 2.61217 1.60327 2.60752 1.60707L1.02753 2.91014C0.432708 3.39641 0.0934745 3.98906 0.0191219 4.67668C-0.0924071 5.786 0.307238 6.81933 0.613943 7.49556C1.36676 9.15573 2.49135 10.6943 4.16893 12.3431C6.20433 14.33 8.65332 15.899 11.4508 17.0045C12.5197 17.4186 13.9463 17.9087 15.5402 17.9923C15.6378 17.9961 15.7401 17.9999 15.833 17.9999C16.9065 17.9999 17.808 17.6845 18.5143 17.0577C18.519 17.0501 18.5283 17.0463 18.5329 17.0387C18.7746 16.7994 19.0534 16.5828 19.3462 16.3511C19.546 16.1953 19.7504 16.032 19.9503 15.861C20.4103 15.4697 20.652 15.0138 20.652 14.5465C20.652 14.0755 20.4057 13.6234 19.9363 13.2435L17.3851 11.1502ZM19.0487 15.1506C19.0441 15.1506 19.0441 15.1544 19.0487 15.1506C18.8675 15.3102 18.6816 15.4545 18.4818 15.6141C18.1797 15.8496 17.873 16.0966 17.5849 16.3739C17.1156 16.7842 16.5626 16.9779 15.8376 16.9779C15.7679 16.9779 15.6936 16.9779 15.6239 16.9741C14.2437 16.9019 12.9611 16.4613 11.9992 16.0852C9.36896 15.0442 7.05939 13.5664 5.14016 11.6935C3.55552 10.1321 2.49599 8.68845 1.79429 7.13845C1.36212 6.19249 1.20412 5.45548 1.27382 4.76026C1.32029 4.31577 1.52941 3.94727 1.91511 3.63195L3.49975 2.33648C3.72746 2.16173 3.96911 2.06675 4.2061 2.06675C4.49887 2.06675 4.73587 2.21112 4.88457 2.33268C4.88922 2.33648 4.89387 2.34028 4.89851 2.34408C5.18198 2.56063 5.45151 2.78477 5.73498 3.02411C5.87904 3.14568 6.02774 3.26724 6.17645 3.39261L7.44509 4.42975C7.93768 4.83244 7.93768 5.20475 7.44509 5.60744C7.31033 5.71762 7.18021 5.82779 7.04544 5.93416C6.65509 6.26087 6.28333 6.5648 5.87904 6.86112C5.86974 6.86872 5.86045 6.87252 5.8558 6.88012C5.45616 7.20683 5.53051 7.52595 5.61416 7.74249C5.6188 7.75389 5.62345 7.76529 5.6281 7.77669C5.95804 8.43012 6.42274 9.04556 7.12909 9.77877L7.13374 9.78257C8.41632 11.0742 9.76861 12.081 11.2603 12.8522C11.4508 12.951 11.646 13.0307 11.8319 13.1067C11.9992 13.1751 12.1572 13.2397 12.292 13.3081C12.3105 13.3157 12.3291 13.3271 12.3477 13.3347C12.5057 13.3992 12.6544 13.4296 12.8078 13.4296C13.1935 13.4296 13.4351 13.2321 13.5141 13.1675L15.1034 11.8682C15.2614 11.7391 15.5123 11.5833 15.8051 11.5833C16.0932 11.5833 16.3302 11.7315 16.4743 11.8606C16.4789 11.8644 16.4789 11.8644 16.4836 11.8682L19.0441 13.9615C19.5227 14.349 19.5227 14.7479 19.0487 15.1506Z" fill="#232323"/>
+                    <path d="M11.8831 4.28157C13.1006 4.44872 14.2066 4.9198 15.0895 5.64162C15.9725 6.36343 16.5441 7.2676 16.7532 8.26295C16.8043 8.51368 17.0692 8.68844 17.3712 8.68844C17.4084 8.68844 17.4409 8.68464 17.4781 8.68084C17.822 8.63525 18.0497 8.36932 17.9939 8.08819C17.743 6.8839 17.046 5.78598 15.9818 4.916C14.9176 4.04603 13.5746 3.47617 12.1015 3.27103C11.7576 3.22544 11.437 3.41159 11.3766 3.68892C11.3162 3.96625 11.5392 4.23598 11.8831 4.28157Z" fill="#232323"/>
+                    <path d="M21.9766 7.94018C21.563 5.95709 20.4199 4.15255 18.6633 2.71652C16.9067 1.28049 14.6994 0.345932 12.2736 0.00781895C11.9344 -0.0415684 11.6137 0.148383 11.5533 0.425712C11.4976 0.70684 11.7253 0.968972 12.0691 1.01836C14.2347 1.31848 16.2097 2.15807 17.7803 3.43834C19.351 4.72241 20.3734 6.33699 20.7405 8.10734C20.7916 8.35808 21.0565 8.53283 21.3586 8.53283C21.3957 8.53283 21.4283 8.52903 21.4655 8.52523C21.8047 8.48344 22.037 8.21751 21.9766 7.94018Z" fill="#232323"/>
+                    </svg> +8168510726
+                    </a></li>
+                    <li>
+                        <a href="mailto:gaadiyadekho9@gmail.com" target="_blank"><svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.0565 0H4.19421C2.24264 0 0.65625 1.2969 0.65625 2.89233V15.1077C0.65625 16.7031 2.24264 18 4.19421 18H26.0505C28.0021 18 29.5885 16.7031 29.5885 15.1077V2.89723C29.5945 1.30179 28.0081 0 26.0565 0ZM27.9781 15.1077C27.9781 15.9739 27.1161 16.6786 26.0565 16.6786H4.19421C3.13462 16.6786 2.27258 15.9739 2.27258 15.1077V2.89723C2.27258 2.03099 3.13462 1.32626 4.19421 1.32626H26.0505C27.1101 1.32626 27.9722 2.03099 27.9722 2.89723V15.1077H27.9781Z" fill="#232323"/>
+                            <path d="M18.9026 8.84833L25.9785 3.66072C26.3078 3.41603 26.3377 3.00004 26.0384 2.72598C25.7391 2.45681 25.2302 2.43234 24.895 2.67704L15.1372 9.83691L13.2335 8.44702C13.2275 8.44213 13.2215 8.43723 13.2215 8.43234C13.1796 8.39808 13.1377 8.36872 13.0898 8.33935L5.34344 2.67214C5.0082 2.42745 4.49936 2.45191 4.20004 2.72598C3.90072 3.00004 3.93065 3.41603 4.26589 3.66072L11.4256 8.89237L4.29582 14.3491C3.97256 14.5987 3.9546 15.0147 4.2599 15.2839C4.42154 15.4209 4.63705 15.4943 4.85256 15.4943C5.05011 15.4943 5.24766 15.4356 5.40331 15.3181L12.6409 9.78307L14.6044 11.217C14.76 11.3296 14.9516 11.3834 15.1432 11.3834C15.3347 11.3834 15.5323 11.3247 15.6819 11.2121L17.6994 9.73413L24.895 15.323C25.0506 15.4454 25.2542 15.5041 25.4517 15.5041C25.6672 15.5041 25.8768 15.4356 26.0384 15.2986C26.3437 15.0343 26.3317 14.6134 26.0085 14.3638L18.9026 8.84833Z" fill="#232323"/>
+                            </svg> gaadiyadekho9@gmail.com
+                            </a>
+                    </li>
+                    <li class="dropdown"><a href="#"><span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02354 0C13.5771 0 17.2803 3.02737 17.2803 6.75C17.2803 11.4289 9.8272 17.5759 9.51069 17.8358C9.37583 17.9449 9.19969 18 9.02354 18C8.8474 18 8.67126 17.9449 8.5364 17.8358C8.21989 17.5759 0.766815 11.4289 0.766815 6.75C0.766815 3.02737 4.46996 0 9.02354 0ZM9.02354 16.6241C10.6666 15.1864 15.9042 10.3241 15.9042 6.75C15.9042 3.64838 12.8175 1.125 9.02354 1.125C5.22958 1.125 2.14294 3.64838 2.14294 6.75C2.14294 10.3208 7.38046 15.1864 9.02354 16.6241Z" fill="#232323"/>
+                        <path d="M9.02398 3.375C11.3001 3.375 13.1523 4.88925 13.1523 6.75C13.1523 8.61075 11.3001 10.125 9.02398 10.125C6.74787 10.125 4.89561 8.61075 4.89561 6.75C4.89561 4.88925 6.74787 3.375 9.02398 3.375ZM9.02398 9C10.5418 9 11.7762 7.99088 11.7762 6.75C11.7762 5.50912 10.5418 4.5 9.02398 4.5C7.50612 4.5 6.27174 5.50912 6.27174 6.75C6.27174 7.99088 7.50612 9 9.02398 9Z" fill="#232323"/>
+                        </svg>
+                        </span>Select Location <span><svg width="16" height="10" viewBox="0 0 16 10"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.30754 8.92342C7.69807 9.31394 8.33123 9.31394 8.72176 8.92342L15.0857 2.55945C15.4762 2.16893 15.4762 1.53577 15.0857 1.14524C14.6952 0.754716 14.062 0.754716 13.6715 1.14524L8.01465 6.8021L2.35779 1.14524C1.96727 0.754716 1.33411 0.754716 0.943581 1.14524C0.553056 1.53577 0.553056 2.16893 0.943581 2.55945L7.30754 8.92342ZM7.01465 6.21631V8.21631H9.01465V6.21631H7.01465Z"
+                            fill="black" />
+                    </svg>
+                </span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+        </li>
+            </ul>
+            <div class="layer-nav"></div>
+            <div class="main-nav">
+                <div class="d-flex gap-2 align-items-center">
+                    <div class="menu-icon d-flex flex-column gap-1" onclick="View()"><span></span><span></span><span></span></div>
+                    <a href="#"><img src="./assets/Images/logo3.svg" class="logo" alt="logo"></a>
+                </div>
+                <ul class="Nav-link mobile-view">
+                    <div class="menu-icon-cross d-flex flex-column gap-1" onclick="View()"><span class="cross"></span><span class="cross2"></span></div>
+                    <a href="#" class="d-lg-none d-flex"><img src="./assets/Images/logo3.svg" class="logo" alt="logo"></a>
+                    <li class="dropdown"><a href="#">New Vehicle<span><svg width="16" height="10" viewBox="0 0 16 10"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.30754 8.92342C7.69807 9.31394 8.33123 9.31394 8.72176 8.92342L15.0857 2.55945C15.4762 2.16893 15.4762 1.53577 15.0857 1.14524C14.6952 0.754716 14.062 0.754716 13.6715 1.14524L8.01465 6.8021L2.35779 1.14524C1.96727 0.754716 1.33411 0.754716 0.943581 1.14524C0.553056 1.53577 0.553056 2.16893 0.943581 2.55945L7.30754 8.92342ZM7.01465 6.21631V8.21631H9.01465V6.21631H7.01465Z"
+                                        fill="black" />
+                                </svg>
+                            </span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Used Vehicles<span><svg width="16" height="10" viewBox="0 0 16 10"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.30754 8.92342C7.69807 9.31394 8.33123 9.31394 8.72176 8.92342L15.0857 2.55945C15.4762 2.16893 15.4762 1.53577 15.0857 1.14524C14.6952 0.754716 14.062 0.754716 13.6715 1.14524L8.01465 6.8021L2.35779 1.14524C1.96727 0.754716 1.33411 0.754716 0.943581 1.14524C0.553056 1.53577 0.553056 2.16893 0.943581 2.55945L7.30754 8.92342ZM7.01465 6.21631V8.21631H9.01465V6.21631H7.01465Z"
+                                        fill="black" />
+                                </svg>
+                            </span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sell Vehicle</a></li>
+                    <li><a href="#">Comparisions</a></li>
+                    <li class="dropdown"><a href="#">More<span><svg width="16" height="10" viewBox="0 0 16 10"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.30754 8.92342C7.69807 9.31394 8.33123 9.31394 8.72176 8.92342L15.0857 2.55945C15.4762 2.16893 15.4762 1.53577 15.0857 1.14524C14.6952 0.754716 14.062 0.754716 13.6715 1.14524L8.01465 6.8021L2.35779 1.14524C1.96727 0.754716 1.33411 0.754716 0.943581 1.14524C0.553056 1.53577 0.553056 2.16893 0.943581 2.55945L7.30754 8.92342ZM7.01465 6.21631V8.21631H9.01465V6.21631H7.01465Z"
+                            fill="black" />
+                    </svg>
+                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+        </li>
+                    <div class="login-nav d-flex gap-2 w-100 d-flex d-sm-none "><button class=" w-100">Sign Up</button><button class="d-flex d-sm-none w-100 align-items-center justify-content-center">Login</button></div>
+                </ul>
+                <div class="login-nav d-flex align-items-center gap-3">
+                    <div class="nav-icon">
+                        <a href="#" title="search" class="d-md-flex d-none"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.8301 13.6155L20.2101 18.9955C20.3992 19.1848 20.5054 19.4414 20.5053 19.7089C20.5052 19.9764 20.3989 20.2329 20.2096 20.422C20.0204 20.6111 19.7638 20.7173 19.4963 20.7172C19.2288 20.7171 18.9722 20.6108 18.7831 20.4215L13.4031 15.0415C11.7948 16.2872 9.77242 16.8734 7.74727 16.6809C5.72211 16.4884 3.84637 15.5316 2.50162 14.0052C1.15687 12.4787 0.444129 10.4974 0.508391 8.46409C0.572652 6.43082 1.40909 4.4984 2.84754 3.05995C4.286 1.62149 6.21842 0.785055 8.25168 0.720793C10.285 0.656532 12.2663 1.36927 13.7927 2.71402C15.3192 4.05877 16.276 5.93452 16.4685 7.95967C16.661 9.98482 16.0748 12.0073 14.8291 13.6155M8.50514 14.7165C10.0964 14.7165 11.6226 14.0844 12.7478 12.9592C13.873 11.834 14.5051 10.3078 14.5051 8.71654C14.5051 7.12524 13.873 5.59912 12.7478 4.4739C11.6226 3.34868 10.0964 2.71654 8.50514 2.71654C6.91384 2.71654 5.38772 3.34868 4.2625 4.4739C3.13728 5.59912 2.50514 7.12524 2.50514 8.71654C2.50514 10.3078 3.13728 11.834 4.2625 12.9592C5.38772 14.0844 6.91384 14.7165 8.50514 14.7165Z"
+                                fill="#000080" />
+                        </svg></a>
+                        <a href="#" title="Notification"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" fill="#000080" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                          </svg></a>
+                        <a href="#" title="Show Account"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#000080" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                          </svg></a>
+                    </div>
+                    <button class="d-none d-sm-flex">Login</button>
+                </div>
+            </div>
+        
+            <div class="Search-bar-home d-flex d-md-none">
+                <ul class="m-0 p-0">
+                    <li class="dropdown"><a href="#" class="text-decoration-none text-black">All<span><svg width="16" height="10" viewBox="0 0 16 10"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.30754 8.92342C7.69807 9.31394 8.33123 9.31394 8.72176 8.92342L15.0857 2.55945C15.4762 2.16893 15.4762 1.53577 15.0857 1.14524C14.6952 0.754716 14.062 0.754716 13.6715 1.14524L8.01465 6.8021L2.35779 1.14524C1.96727 0.754716 1.33411 0.754716 0.943581 1.14524C0.553056 1.53577 0.553056 2.16893 0.943581 2.55945L7.30754 8.92342ZM7.01465 6.21631V8.21631H9.01465V6.21631H7.01465Z"
+                            fill="black" />
+                    </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">New Vehicle</a></li>
+                                    <li><a href="#">Used Vehicle</a></li>
+                                </ul>
+                            </li>
+                </ul>
+                <input type="search" placeholder="Search...">
+            </div>
+        </nav>
+        <div class="row mt-used">
+           
+            <aside class="filter-section col-xl-3 col-lg-2 col-10 mb-4" id="sidebar">
+                <h2 class="border-head">Search By Filters</h2>
+                <div class="accordion over-scroll" id="filterAccordion">
+                    <!-- Category Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#categoryFilter" aria-expanded="true">
+                          Category
+                        </button>
+                      </h2>
+                      <div id="categoryFilter" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="twoWheeler">
+                                <label class="form-check-label" for="twoWheeler">Two-Wheelers</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="threeWheeler">
+                                <label class="form-check-label" for="threeWheeler">Three-Wheelers</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="fourWheeler">
+                                <label class="form-check-label" for="fourWheeler">Four-Wheelers</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="commercialVehicle">
+                                <label class="form-check-label" for="commercialVehicle">Commercial Vehicles</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="constructionEquipment">
+                                <label class="form-check-label" for="constructionEquipment">Construction Equipment</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="buses">
+                                <label class="form-check-label" for="buses">Buses</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="tractor">
+                                <label class="form-check-label" for="tractor">Tractors</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="electricBus">
+                                <label class="form-check-label" for="electricBus">Electric Buses</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="scooter">
+                                <label class="form-check-label" for="scooter">Electric Scooters</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="bike">
+                                <label class="form-check-label" for="bike">Electric Bikes</label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="commercial">
+                                <label class="form-check-label" for="commercial">Electric Commercial</label>
+                            </div>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sub Category Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCategoryFilter">
+                          Sub Category
+                        </button>
+                      </h2>
+                      <div id="subCategoryFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="suv">
+                            <label class="form-check-label" for="suv">SUV</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sedan">
+                            <label class="form-check-label" for="sedan">Sedan</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Brand Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#brandFilter">
+                          Brand
+                        </button>
+                      </h2>
+                      <div id="brandFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="bmw">
+                            <label class="form-check-label" for="bmw">BMW</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="audi">
+                            <label class="form-check-label" for="audi">Audi</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Model Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modelFilter">
+                          Model
+                        </button>
+                      </h2>
+                      <div id="modelFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="model1">
+                            <label class="form-check-label" for="model1">Model 1</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="model2">
+                            <label class="form-check-label" for="model2">Model 2</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Manufacturing Year Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manufacturingYearFilter">
+                          Manufacturing Year
+                        </button>
+                      </h2>
+                      <div id="manufacturingYearFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="year2020">
+                            <label class="form-check-label" for="year2020">2020</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="year2021">
+                            <label class="form-check-label" for="year2021">2021</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Kilometers Driven Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kilometersDrivenFilter">
+                          Kilometers Driven
+                        </button>
+                      </h2>
+                      <div id="kilometersDrivenFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="km5000">
+                            <label class="form-check-label" for="km5000">Up to 5000 km</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="km20000">
+                            <label class="form-check-label" for="km20000">Up to 20000 km</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Fuel Type Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fuelTypeFilter">
+                          Fuel Type
+                        </button>
+                      </h2>
+                      <div id="fuelTypeFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="petrol">
+                            <label class="form-check-label" for="petrol">Petrol</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="diesel">
+                            <label class="form-check-label" for="diesel">Diesel</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Transmission Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transmissionFilter">
+                          Transmission
+                        </button>
+                      </h2>
+                      <div id="transmissionFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="manual">
+                            <label class="form-check-label" for="manual">Manual</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="automatic">
+                            <label class="form-check-label" for="automatic">Automatic</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Ownership Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ownershipFilter">
+                          Ownership
+                        </button>
+                      </h2>
+                      <div id="ownershipFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="firstOwner">
+                            <label class="form-check-label" for="firstOwner">First Owner</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="secondOwner">
+                            <label class="form-check-label" for="secondOwner">Second Owner</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Seats Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seatsFilter">
+                          Seats
+                        </button>
+                      </h2>
+                      <div id="seatsFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="seats2">
+                            <label class="form-check-label" for="seats2">2 Seats</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="seats5">
+                            <label class="form-check-label" for="seats5">5 Seats</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- RTO Filter -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button filter-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rtoFilter">
+                          RTO
+                        </button>
+                      </h2>
+                      <div id="rtoFilter" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rto1">
+                            <label class="form-check-label" for="rto1">RTO 1</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rto2">
+                            <label class="form-check-label" for="rto2">RTO 2</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </aside>
+              <main class="col-xl-9 col-lg-10 col-md-9 col-12">
+                <div class="d-flex justify-content-between">
+                    <h2 class="border-head">Used Vehicles Category</h2>
+                    <button class="btn" onclick="viewSideBar()">Filters</button>
+                </div>
+                <p class="">Lorem Ipsum is simply dummy text of the printing and type setting  industry.. <br class="d-md-block d-none"/> Ipsum is simply dummy.</p>
+                <div class="d-flex over-scroll gap-3 mb-4 price-btn">
+                  <button class="btn btn-primary">Under 1 Lakh</button>
+                  <button class="btn btn-primary">1 - 5 Lakhs</button>
+                  <button class="btn btn-primary">5 - 7 Lakhs</button>
+                  <button class="btn btn-primary">7 - 10 Lakhs</button>
+                  <button class="btn btn-primary">10 - 20 Lakhs</button>
+                  <button class="btn btn-primary">20 - 50 Lakhs</button>
+                  <button class="btn btn-primary">50 Lakhs - Above</button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2 btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <div class="card-used-vehicle">
+                            <div class="d-flex gap-2 justify-content-lg-between">
+                                <img src="./assets/Images/gallery-img2.png" alt="image">
+                                <div>
+                                    <h4 class="fw-bold m-0">Honda Elevate</h4>
+                                    <p class="fw-bold price color-blue m-0">₹ 11,91,000 /-</p>
+                                    <p class="fw-semibold d-flex align-items-center gap-1 m-0"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_17204_304)">
+                                        <path d="M3 2.5C3 2.36739 3.05268 2.24021 3.14645 2.14645C3.24021 2.05268 3.36739 2 3.5 2H8.5C8.63261 2 8.75979 2.05268 8.85355 2.14645C8.94732 2.24021 9 2.36739 9 2.5V7.5C9 7.63261 8.94732 7.75979 8.85355 7.85355C8.75979 7.94732 8.63261 8 8.5 8H3.5C3.36739 8 3.24021 7.94732 3.14645 7.85355C3.05268 7.75979 3 7.63261 3 7.5V2.5Z" fill="black"/>
+                                        <path d="M1 2C1 1.46957 1.21071 0.960859 1.58579 0.585786C1.96086 0.210714 2.46957 0 3 0L9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V10C11.5304 10 12.0391 10.2107 12.4142 10.5858C12.7893 10.9609 13 11.4696 13 12V12.5C13 12.6326 13.0527 12.7598 13.1464 12.8536C13.2402 12.9473 13.3674 13 13.5 13C13.6326 13 13.7598 12.9473 13.8536 12.8536C13.9473 12.7598 14 12.6326 14 12.5V8H13.5C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V4.375C13 4.24239 13.0527 4.11521 13.1464 4.02145C13.2402 3.92768 13.3674 3.875 13.5 3.875H14.995C14.984 3.399 14.942 2.981 14.794 2.653C14.7148 2.46228 14.5767 2.30183 14.4 2.195C14.216 2.085 13.936 2 13.5 2C13.3674 2 13.2402 1.94732 13.1464 1.85355C13.0527 1.75979 13 1.63261 13 1.5C13 1.36739 13.0527 1.24021 13.1464 1.14645C13.2402 1.05268 13.3674 1 13.5 1C14.064 0.998667 14.5347 1.11067 14.912 1.336C15.295 1.564 15.546 1.887 15.706 2.243C16.001 2.898 16 3.708 16 4.324V7.499C16.0001 7.56474 15.9873 7.62987 15.9622 7.69065C15.9372 7.75143 15.9003 7.80666 15.8539 7.8532C15.8075 7.89974 15.7523 7.93665 15.6916 7.96184C15.6308 7.98703 15.5657 8 15.5 8H15V12.5C15 12.8978 14.842 13.2794 14.5607 13.5607C14.2794 13.842 13.8978 14 13.5 14C13.1022 14 12.7206 13.842 12.4393 13.5607C12.158 13.2794 12 12.8978 12 12.5V12C12 11.7348 11.8946 11.4804 11.7071 11.2929C11.5196 11.1054 11.2652 11 11 11V15H11.5C11.6326 15 11.7598 15.0527 11.8536 15.1464C11.9473 15.2402 12 15.3674 12 15.5C12 15.6326 11.9473 15.7598 11.8536 15.8536C11.7598 15.9473 11.6326 16 11.5 16H0.5C0.367392 16 0.240215 15.9473 0.146447 15.8536C0.0526784 15.7598 0 15.6326 0 15.5C0 15.3674 0.0526784 15.2402 0.146447 15.1464C0.240215 15.0527 0.367392 15 0.5 15H1V2ZM10 2C10 1.73478 9.89464 1.48043 9.70711 1.29289C9.51957 1.10536 9.26522 1 9 1H3C2.73478 1 2.48043 1.10536 2.29289 1.29289C2.10536 1.48043 2 1.73478 2 2V15H10V2Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_17204_304">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>Petrol</p>
+                                        <p class="m-0 d-flex align-items-center gap-1"><span><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4165 2.33317C1.4165 1.68884 2.05077 1.1665 2.83317 1.1665C3.61557 1.1665 4.24984 1.68884 4.24984 2.33317C4.24984 2.82279 3.8836 3.24196 3.36442 3.41503V6.56234H7.96859V3.41503C7.44938 3.24196 7.08317 2.82279 7.08317 2.33317C7.08317 1.68884 7.71741 1.1665 8.49984 1.1665C9.28226 1.1665 9.9165 1.68884 9.9165 2.33317C9.9165 2.82279 9.55029 3.24196 9.03109 3.41503V6.56234H11.3332C12.016 6.56234 12.4747 6.5614 12.8168 6.52355C13.1437 6.48732 13.2836 6.42479 13.3759 6.34878C13.4682 6.27277 13.5442 6.15756 13.5882 5.88835C13.6341 5.60659 13.6353 5.22884 13.6353 4.6665V3.41503C13.116 3.24196 12.7498 2.82279 12.7498 2.33317C12.7498 1.68884 13.3841 1.1665 14.1665 1.1665C14.9489 1.1665 15.5832 1.68884 15.5832 2.33317C15.5832 2.82279 15.217 3.24196 14.6978 3.41503V4.69683C14.6978 5.22095 14.6978 5.658 14.6412 6.00496C14.5814 6.37118 14.4498 6.70181 14.1272 6.96746C13.8046 7.23317 13.4031 7.3415 12.9584 7.39073C12.5371 7.4374 12.0064 7.43734 11.37 7.43734H9.03109V10.5847C9.55029 10.7577 9.9165 11.1769 9.9165 11.6665C9.9165 12.3109 9.28226 12.8332 8.49984 12.8332C7.71741 12.8332 7.08317 12.3109 7.08317 11.6665C7.08317 11.1769 7.44938 10.7577 7.96859 10.5847V7.43734H3.36442V10.5847C3.8836 10.7577 4.24984 11.1769 4.24984 11.6665C4.24984 12.3109 3.61557 12.8332 2.83317 12.8332C2.05077 12.8332 1.4165 12.3109 1.4165 11.6665C1.4165 11.1769 1.78274 10.7577 2.30192 10.5847V3.41503C1.78274 3.24196 1.4165 2.82279 1.4165 2.33317Z" fill="#1C274C"/>
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12.2188 8.75C12.2188 8.50838 12.4566 8.3125 12.75 8.3125H14.369C15.3433 8.3125 16.1146 8.97394 16.1146 9.77083C16.1146 10.4 15.6338 10.9447 14.9519 11.1462L16.0364 12.6049C16.1896 12.8109 16.111 13.0803 15.8607 13.2064C15.6105 13.3326 15.2834 13.2679 15.1303 13.0618L13.7678 11.2292H13.2812V12.8333C13.2812 13.0749 13.0434 13.2708 12.75 13.2708C12.4566 13.2708 12.2188 13.0749 12.2188 12.8333V8.75ZM13.2812 10.3542H14.369C14.736 10.3542 15.0521 10.1015 15.0521 9.77083C15.0521 9.44014 14.736 9.1875 14.369 9.1875H13.2812V10.3542Z" fill="#1C274C"/>
+                                            </svg>
+                                            </span> Automatic</p>
+                                            <button class="btn mt-2  btn-contact"><span class="d-lg-none d-xl-inline-block  d-sm-inline-block d-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.00022 19L3.07022 18.63C3.00377 18.7972 2.98365 18.9792 3.012 19.1569C3.04035 19.3346 3.11611 19.5013 3.23129 19.6395C3.34647 19.7777 3.49681 19.8823 3.66646 19.9422C3.8361 20.0022 4.01878 20.0152 4.19522 19.98L4.00022 19ZM8.70622 18.064L9.18022 17.183L8.86322 17.013L8.51122 17.083L8.70622 18.064ZM5.62422 14.917L6.55422 15.287L6.71722 14.873L6.52122 14.474L5.62422 14.917ZM19.0002 12C19.0002 15.246 16.1472 18 12.4702 18V20C17.1112 20 21.0002 16.486 21.0002 12H19.0002ZM5.94122 12C5.94122 8.754 8.79522 6 12.4712 6V4C7.83022 4 3.94022 7.514 3.94022 12H5.94122ZM12.4712 6C16.1472 6 19.0002 8.754 19.0002 12H21.0002C21.0002 7.514 17.1122 4 12.4712 4V6ZM12.4702 18C11.2652 18 10.1432 17.7 9.18022 17.183L8.23222 18.944C9.53554 19.6427 10.9914 20.0056 12.4702 20V18ZM4.19522 19.98L8.90122 19.044L8.51122 17.083L3.80522 18.019L4.19522 19.981V19.98ZM6.52122 14.474C6.14052 13.7048 5.94273 12.8583 5.94122 12H3.94022C3.94022 13.2 4.22222 14.338 4.72622 15.36L6.52122 14.474ZM4.69522 14.547L3.07022 18.631L4.92822 19.369L6.55222 15.286L4.69422 14.547H4.69522Z" fill="#fff"/>
+                                                <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13Z" fill="#fff"/>
+                                                <path d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13Z" fill="#fff"/>
+                                                <path d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z" fill="#fff"/>
+                                                </svg>
+                                                </span> Contact Seller <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5421 2.15394L9.7961 9.41394C9.9321 9.55394 10.0001 9.71494 10.0001 9.89694C9.99851 10.0836 9.92551 10.2625 9.7961 10.3969L2.2211 17.7949C1.83776 18.1123 1.4971 18.1123 1.1991 17.7949C0.900431 17.4783 0.900431 17.1516 1.1991 16.8149L8.2791 9.89694L1.5251 3.13394C1.28776 2.79127 1.30976 2.4796 1.5911 2.19894C1.87243 1.91894 2.18943 1.90394 2.5421 2.15394ZM11.5421 2.15394L18.7961 9.41394C18.9321 9.55394 19.0001 9.71494 19.0001 9.89694C18.9985 10.0836 18.9255 10.2625 18.7961 10.3969L11.2211 17.7949C10.8378 18.1123 10.4971 18.1123 10.1991 17.7949C9.89976 17.4783 9.89976 17.1516 10.1991 16.8149L17.2791 9.89694L10.5251 3.13394C10.2884 2.79127 10.3104 2.4796 10.5911 2.19894C10.8724 1.91894 11.1894 1.90394 11.5421 2.15394Z" fill="#fff"/>
+                                                    </svg>
+                                                    </span></button>
+                                </div>
+                                <span class="cursor"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3204 11.9674C24.3221 10.8901 24.8785 9.43558 24.8674 7.92385C24.8562 6.41211 24.2783 4.96699 23.2609 3.90639C22.7571 3.38124 22.1605 2.96629 21.5053 2.68524C20.85 2.4042 20.1489 2.26256 19.442 2.26841C18.0142 2.28022 16.6494 2.89208 15.6477 3.96939C15.3757 4.25739 15.0301 4.61089 14.6107 5.02989L13.4448 6.19239L12.2789 5.02989C11.8586 4.60989 11.5125 4.25639 11.2405 3.96939C10.2309 2.90044 8.86163 2.29991 7.43388 2.29991C6.00614 2.29991 4.63687 2.90044 3.6273 3.96939C1.54763 6.17289 1.52355 9.73539 3.5508 11.9494L13.4448 22.4254L23.3204 11.9674ZM2.42455 2.69739C3.08232 2.00074 3.86327 1.44812 4.72278 1.07109C5.58229 0.694054 6.50353 0.499995 7.43388 0.499995C8.36424 0.499995 9.28548 0.694054 10.145 1.07109C11.0045 1.44812 11.7854 2.00074 12.4432 2.69739C12.7011 2.97139 13.0349 3.31239 13.4448 3.72039C13.8528 3.31239 14.1867 2.97089 14.4464 2.69589C15.7646 1.27864 17.5606 0.473906 19.4392 0.458715C21.3178 0.443525 23.1251 1.21912 24.4636 2.61489C25.8021 4.01066 26.5622 5.91226 26.5765 7.90137C26.5909 9.89047 25.8584 11.8041 24.5401 13.2214L14.4464 23.9104C14.1807 24.1916 13.8204 24.3496 13.4448 24.3496C13.0692 24.3496 12.7089 24.1916 12.4432 23.9104L2.34663 13.2199C1.05186 11.806 0.334272 9.90959 0.348851 7.94024C0.363429 5.97089 1.109 4.08663 2.42455 2.69439V2.69739Z" fill="black"/>
+                                    </svg>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-between pe-2">
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                  </svg>
+                                    </span> 2022</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_17204_323)">
+                                    <path d="M11.5 6C11.5 6.79565 11.1839 7.55871 10.6213 8.12132C10.0587 8.68393 9.29565 9 8.5 9C7.70435 9 6.94129 8.68393 6.37868 8.12132C5.81607 7.55871 5.5 6.79565 5.5 6C5.5 5.20435 5.81607 4.44129 6.37868 3.87868C6.94129 3.31607 7.70435 3 8.5 3C9.29565 3 10.0587 3.31607 10.6213 3.87868C11.1839 4.44129 11.5 5.20435 11.5 6Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8C0.5 5.87827 1.34285 3.84344 2.84315 2.34315C4.34344 0.842855 6.37827 0 8.5 0C10.6217 0 12.6566 0.842855 14.1569 2.34315C15.6571 3.84344 16.5 5.87827 16.5 8C16.5 10.1217 15.6571 12.1566 14.1569 13.6569C12.6566 15.1571 10.6217 16 8.5 16C6.37827 16 4.34344 15.1571 2.84315 13.6569C1.34285 12.1566 0.5 10.1217 0.5 8ZM8.5 1C7.18178 1.00007 5.89037 1.37236 4.7744 2.07403C3.65844 2.77569 2.76328 3.77821 2.19196 4.96619C1.62065 6.15418 1.39639 7.47934 1.545 8.78916C1.69361 10.099 2.20905 11.3402 3.032 12.37C3.742 11.226 5.305 10 8.5 10C11.695 10 13.257 11.225 13.968 12.37C14.7909 11.3402 15.3064 10.099 15.455 8.78916C15.6036 7.47934 15.3794 6.15418 14.808 4.96619C14.2367 3.77821 13.3416 2.77569 12.2256 2.07403C11.1096 1.37236 9.81822 1.00007 8.5 1Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_17204_323">
+                                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                                    </span> 2nd Owner</p>
+                                <p class="m-0 d-flex align-items-center gap-2"><span><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5625 13.75C21.5615 11.9129 21.0048 10.1152 19.9597 8.57384L18.9218 9.56728C19.7091 10.8326 20.1248 12.2776 20.125 13.75H21.5625ZM20.125 6.47215L19.1087 5.50003L12.9512 11.3898C12.513 11.1372 12.0116 11.0025 11.5 11C10.9314 11 10.3755 11.1613 9.90275 11.4635C9.42996 11.7657 9.06146 12.1952 8.84386 12.6976C8.62626 13.2001 8.56932 13.7531 8.68026 14.2865C8.79119 14.82 9.06501 15.31 9.46708 15.6946C9.86916 16.0792 10.3814 16.3411 10.9391 16.4472C11.4968 16.5533 12.0749 16.4988 12.6002 16.2907C13.1256 16.0826 13.5746 15.7301 13.8905 15.2778C14.2064 14.8256 14.375 14.2939 14.375 13.75C14.3725 13.2604 14.2317 12.7806 13.9675 12.3613L20.125 6.47215ZM11.5 15.125C11.2157 15.125 10.9378 15.0444 10.7014 14.8933C10.465 14.7422 10.2807 14.5275 10.1719 14.2762C10.0631 14.025 10.0347 13.7485 10.0901 13.4818C10.1456 13.2151 10.2825 12.9701 10.4835 12.7778C10.6846 12.5855 10.9407 12.4545 11.2196 12.4014C11.4984 12.3484 11.7875 12.3756 12.0501 12.4797C12.3128 12.5838 12.5373 12.76 12.6953 12.9861C12.8532 13.2122 12.9375 13.4781 12.9375 13.75C12.9375 14.1147 12.7861 14.4644 12.5165 14.7223C12.2469 14.9802 11.8813 15.125 11.5 15.125ZM11.5 5.50003C13.0391 5.50039 14.5496 5.89799 15.8722 6.6509L16.9172 5.65196C15.3985 4.71777 13.6446 4.19238 11.8401 4.13106C10.0356 4.06974 8.24718 4.47477 6.66299 5.30352C5.07879 6.13228 3.7574 7.35413 2.83784 8.84052C1.91828 10.3269 1.43454 12.0229 1.43751 13.75H2.87501C2.87768 11.5628 3.78723 9.46583 5.40416 7.91921C7.02108 6.37259 9.21334 5.50257 11.5 5.50003Z" fill="black"/>
+                                    </svg>
+                                    
+                                    </span> 12,000 Kms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script> let mobileView = document.querySelectorAll(".mobile-view");
+        let layerNav = document.querySelector(".layer-nav");
+        
+        function View() {
+            mobileView.forEach(view => {
+                view.classList.toggle("left-view");
+            });
+            layerNav.classList.toggle("d-block");
+        }
+        </script>
+    <script>
+        let filterSection = document.querySelector(".filter-section");
+        let filterButton = document.querySelector(".btn");
+    
+        function viewSideBar() {
+            filterSection.classList.toggle("left-side");
+    
+            // Toggle button text and icon
+            if (filterSection.classList.contains("left-side")) {
+                filterButton.innerHTML = '✖'; // Cross icon
+            } else {
+                filterButton.innerHTML = 'Filters'; // Default button text
+            }
+        }
+    </script>
+        
+</body>
+</html>

@@ -568,7 +568,7 @@
             <div class="row mt-sm-4 mt-2">
                 <div class="col-3 d-lg-block d-none">
                     <div class=" d-flex align-items-center flex-column gap-2">
-                        <button class="electric-btn">Sell Electric Vehicle</button>
+                        <button class="electric-btn">Sell Vehicle</button>
                         <button class="electric-btn">Nearest Vehicle</button>
                     </div>
                 </div>
@@ -624,40 +624,67 @@
                 <div class="col-md-5 col-12">
                     <video id="hover-video" style="border-radius: 12px; object-fit: cover;" class="video-sell" width="100%" height="300" autoplay loop>
                         <source src="./assets/Images/video-website-front.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="swiper swiper-perfect">
+                    <div class="swiper swiper-container" style="overflow: hidden; height: 220px;">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="main-card d-flex align-items-center justify-content-center flex-column gap-3">
-                                    <img src="./assets/Images/sale-vehicle-icon.png" alt="sale">
-                                    <p class="m-0">Sale Vehicle</p>
+                          <div class="swiper-slide">
+                            <div class="content-wrapper">
+                              <div class="info-container">
+                                <div class="avatar-section">
+                                  <img src="./assets/Images/rta-icon.png" alt="RTA Related Information">
                                 </div>
+                              </div>
+                              <div class="action-layer">
+                                <p class="primary-heading text-uppercase">RTA RELATED Informations</p>
+                                <button class="secondary-btn">Get RTA Info</button>
+                              </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="main-card d-flex align-items-center justify-content-center flex-column gap-3">
-                                    <img src="./assets/Images/rta-icon.png" alt="rta">
-                                    <p class="m-0">RTA Related Informations</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="content-wrapper">
+                              <div class="info-container">
+                                <div class="avatar-section">
+                                  <img src="./assets/Images/requirements.jpg" alt="Post Your Requirement">
                                 </div>
+                              </div>
+                              <div class="action-layer">
+                                <p class="primary-heading text-uppercase">Post Requirement</p>
+                                <button class="secondary-btn">Submit Now</button>
+                              </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="main-card d-flex align-items-center justify-content-center flex-column gap-3">
-                                    <img src="./assets/Images/nearest-vehicle-icon.png" alt="Nearest">
-                                    <p class="m-0">Nearest Vehicle</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="content-wrapper">
+                              <div class="info-container">
+                                <div class="avatar-section">
+                                  <img src="./assets/Images/bankkit.png" alt="Post Your Requirement">
                                 </div>
+                              </div>
+                              <div class="action-layer">
+                                <p class="primary-heading text-uppercase">Bank kit Vehicles</p>
+                                <button class="secondary-btn">Submit Now</button>
+                              </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="main-card d-flex align-items-center justify-content-center flex-column gap-3">
-                                    <img src="./assets/Images/requirements.jpg" alt="requirment">
-                                    <p class="m-0">Post your requirement</p>
+                          </div>
+                          <div class="swiper-slide d-md-none d-inline-flex">
+                            <div class="content-wrapper">
+                              <div class="info-container">
+                                <div class="avatar-section">
+                                  <img src="./assets/Images/nearest-vehicle-icon.png" alt="Nearest Vehicle">
                                 </div>
+                              </div>
+                              <div class="action-layer">
+                                <p class="primary-heading text-uppercase">Nearest Vehicles</p>
+                                <button class="secondary-btn">Locate</button>
+                              </div>
                             </div>
+                          </div>
                         </div>
                         <div class="swiper-pagination"></div>
-                    </div>
-                    <p class="m-0 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione vitae repellat eum,Lorem <span class="d-md-flex d-none">dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum porro labore veniam architecto, laboriosam blanditiis!</span>
+                      </div>
+                    <p class="m-0 text-center text-md-start pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione vitae repellat eum,Lorem <span class="d-md-flex d-none">dolor sit amet, consectetur adipisicing elit. Mollitia, reiciendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum porro labore veniam architecto, laboriosam blanditiis!</span>
                         </p>
                 </div>
             </div>
@@ -1846,7 +1873,7 @@
             <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, iste impedit minima
                 similique <br class="d-lg-flex d-none" /> unde assumenda! Nobis assumenda ea hic suscipit quae! Error veritatis aliquid dolorum!
             </p>
-            <div class="swiper-container gallery-slide">
+            <div class="swiper-container swiper gallery-slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="gallery single">
@@ -5723,7 +5750,7 @@
             </div>
         </section>
          <!-- Two-wheeler-category -->
-         <section class="mt-50 sec-bg">
+        <section class="mt-50 sec-bg">
             <h2 class="head-line text-center fw-bold"><span class="color-blue">Two</span> Wheelers Category</h2>
             <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, iste 
                 similique 
@@ -5732,16 +5759,28 @@
                 <div class="swiper swiper-2w">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide two-w-slider">
-                            <img class="w-100 two-w-category" src="./assets/Images/hero-destini-scooty.png" alt="">
+                            <img class="w-100 two-w-category" src="./assets/Images/hero-destini-scooty.png" alt="two-w-category">
                         </div>
                         <div class="swiper-slide two-w-slider">
-                            <img class="w-100 two-w-category" src="./assets/Images/suzuki-scooty.png" alt="">
+                            <img class="w-100 two-w-category" src="./assets/Images/suzuki-scooty.png" alt="two-w-category">
                         </div>
                         <div class="swiper-slide two-w-slider">
-                            <img class="w-100 two-w-category" src="./assets/Images/royal-enfield-bullet.png" alt="">
+                            <img class="w-100 two-w-category" src="./assets/Images/royal-enfield-bullet.png" alt="two-w-category">
                         </div>
                         <div class="swiper-slide two-w-slider">
-                            <img class="w-100 two-w-category" src="./assets/Images/bajaj-ns400-bike.png" alt="">
+                            <img class="w-100 two-w-category" src="./assets/Images/2w-category4.png" alt="two-w-category">
+                        </div>
+                        <div class="swiper-slide two-w-slider">
+                            <img class="w-100 two-w-category" src="./assets/Images/bajaj-ns400-bike.png" alt="two-w-category">
+                        </div>
+                        <div class="swiper-slide two-w-slider">
+                            <img class="w-100 two-w-category" src="./assets/Images/2w-category.png" alt="two-w-category">
+                        </div>
+                        <div class="swiper-slide two-w-slider">
+                            <img class="w-100 two-w-category" src="./assets/Images/2w-category2.png" alt="two-w-category">
+                        </div>
+                        <div class="swiper-slide two-w-slider">
+                            <img class="w-100 two-w-category" src="./assets/Images/2w-category3.png" alt="two-w-category">
                         </div>
                     </div>
                     <!-- Pagination -->
